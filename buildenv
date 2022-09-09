@@ -29,12 +29,11 @@ export ZOPEN_TYPE="TARBALL"
 #  - git: required by build.sh to be able to apply patches
 # Many packages will require basic tools like m4, make.
 #
-export ZOPEN_ROOT=$PWD
 export ZOPEN_TARBALL_URL="http://www.greenwoodsoftware.com/less/less-590.tar.gz"
 export ZOPEN_TARBALL_DEPS="make curl gzip" 
 
 export LDFLAGS="-Wl,edit=no"
-export CFLAGS="-O2 -qascii -q64 -std=gnu11 $(CPPFLAGS) -DPATH_MAX=2048 -D_XOPEN_SOURCE_EXTENDED=1"
-export CC=xlclang
+export ZOPEN_EXTRA_CFLAGS="-O2 -q64 -DPATH_MAX=2048"
+#export CFLAGS="-O2 -qascii -q64 -std=gnu11 $(CPPFLAGS) -DPATH_MAX=2048 -D_XOPEN_SOURCE_EXTENDED=1"
 
 export ZOPEN_INSTALL_OPTS="install PREFIX=\$ZOPEN_INSTALL_DIR"
