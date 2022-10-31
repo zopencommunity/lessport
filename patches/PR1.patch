@@ -1,0 +1,15 @@
+diff --git a/ttyin.c b/ttyin.c
+index 4be4527..5b5bbb0 100644
+--- a/ttyin.c
++++ b/ttyin.c
+@@ -76,6 +76,10 @@ open_tty(VOID_PARAM)
+ 	if (fd < 0)
+ 		fd = 2;
+ 	return fd;
++#ifdef __MVS__
++  struct f_cnvrt cvtreq = {SETCVTON, 0, 1047};
++  fcntl(fd, F_CONTROL_CVT, &cvtreq);
++#endif
+ }
+ #endif /* MSDOS_COMPILER */
+ 
