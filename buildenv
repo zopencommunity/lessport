@@ -30,11 +30,10 @@ export ZOPEN_TYPE="TARBALL"
 # Many packages will require basic tools like m4, make.
 #
 export ZOPEN_TARBALL_URL="http://www.greenwoodsoftware.com/less/less-608.tar.gz"
-export ZOPEN_TARBALL_DEPS="make curl gzip" 
+export ZOPEN_TARBALL_DEPS="make curl gzip tar ncurses zoslib" 
 
 export LDFLAGS="-Wl,edit=no"
 export ZOPEN_EXTRA_CFLAGS="-O2 -DPATH_MAX=1024"
 
 export ZOPEN_INSTALL_OPTS="install PREFIX=\$ZOPEN_INSTALL_DIR"
-
 export ZOPEN_CHECK="skip"
