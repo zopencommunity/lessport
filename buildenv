@@ -32,7 +32,32 @@ export ZOPEN_TARBALL_URL="http://www.greenwoodsoftware.com/less/less-608.tar.gz"
 export ZOPEN_TARBALL_DEPS="make curl gzip tar ncurses zoslib" 
 
 export LDFLAGS="-Wl,edit=no"
-export ZOPEN_EXTRA_CFLAGS="-O2 -DPATH_MAX=1024"
+export ZOPEN_EXTRA_CFLAGS="-DPATH_MAX=1024"
 
 export ZOPEN_INSTALL_OPTS="install PREFIX=\$ZOPEN_INSTALL_DIR"
-export ZOPEN_CHECK="skip"
+export ZOPEN_CHECK="./basictest.sh"
+export ZOPEN_CHECK_OPTS=''
+
+zopen_check_results()
+{
+# Example check log file:
+#
+# basic less test passed
+chk="$1/$2_check.log"
+
+totalTests=1
+if grep "^basic less test passed" ${chk} ; then
+  actualPass=1
+  actualErrors=0
+else
+  actualPass=0
+  actualErrors=1
+fi
+expectedErrors=0
+
+cat <<ZZ
+actualFailures:$actualErrors
+totalTests:$totalTests
+expectedFailures:$expectedErrors
+ZZ
+}
