@@ -1,11 +1,11 @@
 diff --git a/basictest.sh b/basictest.sh
 new file mode 100755
-index 0000000..3c1302c
+index 0000000..2f91607
 --- /dev/null
 +++ b/basictest.sh
 @@ -0,0 +1,8 @@
 +#!/bin/sh
-+actual=$(less --version | head -1)
++actual=$(./less --version | head -1)
 +expected='less 608 (POSIX regular expressions)'
 +if [ "${actual}x" != "${expected}x" ]; then
 +  echo 'less failed'
