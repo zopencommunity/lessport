@@ -1,0 +1,17 @@
+diff --git a/Makefile.in b/Makefile.in
+index d087e9e..9d903bb 100644
+--- a/Makefile.in
++++ b/Makefile.in
+@@ -62,10 +62,10 @@ less$(EXEEXT): ${OBJ}
+ 	${CC} ${LDFLAGS} -o $@ ${OBJ} ${LIBS}
+ 
+ lesskey$(EXEEXT): lesskey.${O} lesskey_parse.${O} xbuf.${O} version.${O}
+-	${CC} ${LDFLAGS} -o $@ lesskey.${O} lesskey_parse.${O} xbuf.${O} version.${O}
++	${CC} ${LDFLAGS} -o $@ lesskey.${O} lesskey_parse.${O} xbuf.${O} version.${O} ${LIBS}
+ 
+ lessecho$(EXEEXT): lessecho.${O} version.${O}
+-	${CC} ${LDFLAGS} -o $@ lessecho.${O} version.${O}
++	${CC} ${LDFLAGS} -o $@ lessecho.${O} version.${O} ${LIBS}
+ 
+ charset.${O}: compose.uni ubin.uni wide.uni
+ 
