@@ -1,0 +1,18 @@
+diff --git a/charset.c b/charset.c
+index 5e9a2d6..12fdfd9 100644
+--- a/charset.c
++++ b/charset.c
+@@ -389,6 +389,13 @@ set_charset(VOID_PARAM)
+ 	(void) icharset("latin1", 1);
+ #endif
+ #endif
++
++#if __MVS__
++	/*
++	 * Default to "utf-8".
++	 */
++	(void) icharset("utf-8", 1);
++#endif
+ }
+ 
+ /*
