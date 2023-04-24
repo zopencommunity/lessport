@@ -1,18 +1,31 @@
 diff --git a/charset.c b/charset.c
-index 5e9a2d6..60861d0 100644
+index 5e9a2d6..f481d90 100644
 --- a/charset.c
 +++ b/charset.c
-@@ -389,6 +389,13 @@ set_charset(VOID_PARAM)
+@@ -376,19 +376,25 @@ set_charset(VOID_PARAM)
+ 	 * rather than from predefined charset entry.
+ 	 */
+ 	ilocale();
++#ifdef __MVS__
++	/*
++	 * z/OS Locale does not properly support UTF-8. Default to "utf-8".
++	 */
++	(void) icharset("utf-8", 1);
++#endif
+ #else
+ #if MSDOS_COMPILER
+ 	/*
+ 	 * Default to "dos".
+ 	 */
+ 	(void) icharset("dos", 1);
+-#else
+ 	/*
+ 	 * Default to "latin1".
+ 	 */
  	(void) icharset("latin1", 1);
  #endif
  #endif
 +
-+#ifdef __MVS__
-+	/*
-+	 * Default to "utf-8".
-+	 */
-+	(void) icharset("utf-8", 1);
-+#endif
  }
  
  /*
