@@ -31,7 +31,6 @@ export ZOPEN_TYPE="TARBALL"
 export ZOPEN_TARBALL_URL="http://www.greenwoodsoftware.com/less/less-632.tar.gz"
 export ZOPEN_TARBALL_DEPS="make curl gzip tar ncurses zoslib"
 
-export LDFLAGS="-Wl,edit=no"
 export ZOPEN_EXTRA_CFLAGS="-DPATH_MAX=1024"
 
 export ZOPEN_INSTALL_OPTS="install PREFIX=\$ZOPEN_INSTALL_DIR"
