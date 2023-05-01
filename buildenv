@@ -37,6 +37,7 @@ export ZOPEN_EXTRA_CFLAGS="-DPATH_MAX=1024"
 export ZOPEN_INSTALL_OPTS="install PREFIX=\$ZOPEN_INSTALL_DIR"
 export ZOPEN_CHECK="./basictest.sh"
 export ZOPEN_CHECK_OPTS=''
+export ZOPEN_COMP=CLANG
 
 zopen_check_results()
 {
