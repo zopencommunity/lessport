@@ -6,7 +6,7 @@ index 0000000..4d28fca
 @@ -0,0 +1,8 @@
 +#!/bin/sh
 +actual=$(./less --version | head -1)
-+expected='less 632 (POSIX regular expressions)'
++expected='less 643 (POSIX regular expressions)'
 +if [ "${actual}x" != "${expected}x" ]; then
 +  echo 'less failed'
 +else

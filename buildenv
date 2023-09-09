@@ -28,7 +28,7 @@ export ZOPEN_TYPE="TARBALL"
 #  - git: required by build.sh to be able to apply patches
 # Many packages will require basic tools like m4, make.
 #
-export ZOPEN_TARBALL_URL="http://www.greenwoodsoftware.com/less/less-632.tar.gz"
+export ZOPEN_TARBALL_URL="http://www.greenwoodsoftware.com/less/less-643.tar.gz"
 export ZOPEN_TARBALL_DEPS="make curl gzip tar ncurses zoslib"
 
 export ZOPEN_EXTRA_CFLAGS="-DPATH_MAX=1024"
@@ -37,6 +37,8 @@ export ZOPEN_INSTALL_OPTS="install PREFIX=\$ZOPEN_INSTALL_DIR"
 export ZOPEN_CHECK="./basictest.sh"
 export ZOPEN_CHECK_OPTS=''
 export ZOPEN_COMP=CLANG
+
+export ZOPEN_CLEAN="true"
 
 zopen_check_results()
 {
