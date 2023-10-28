@@ -1,35 +1,9 @@
-#
-# Set up environment variables for general build tool to operate
-# This buildenv is a sample. It describes the minimal environment
-# variables required to set up a port environment.
-# Alternate environment configurations of the name setenv_<variant>.sh
-# are also available for reading.
-#
-#
-# The ZOPEN_TYPE is required. This indicates whether the Open-Source
-# package contents are stored in a 'git' format or a 'tarball' format.
-# At some point, other formats (perhaps pax) may be supported
-# For this example, we are specifying that we will use a zipped tarball format
-# for our build.
-#
-export ZOPEN_TYPE="TARBALL"
+# bump: less-version /LESS_VERSION="(.*)"/ fetch:https://www.greenwoodsoftware.com/less/|/less-(\d+)./|semver:*
+LESS_VERSION="632"
 
-#
-# Given the ZOPEN_TYPE, build.sh will then need to know where to download from,
-# and what other software is required to be able to build this code.
-# Since a TARBALL was selected, the environment variables
-# ZOPEN_TARBALL_URL and ZOPEN_TARBALL_DEPS are required to be specified.
-# The ZOPEN_TARBALL_URL is the fully-qualified location of the tar.gz format of
-# tarball, or the tar.xz format of tarball.
-# The ZOPEN_TARBALL_DEPS lists each of the ported tools that are required to be
-# able to build the code. In the simplest case, this will include:
-#  - curl: required to be able to download the tarball
-#  - gz or xz: required to be able to unzip the tarball
-#  - git: required by build.sh to be able to apply patches
-# Many packages will require basic tools like m4, make.
-#
-export ZOPEN_TARBALL_URL="http://www.greenwoodsoftware.com/less/less-643.tar.gz"
-export ZOPEN_TARBALL_DEPS="make curl gzip tar ncurses zoslib"
+export ZOPEN_BUILD_LINE="STABLE"
+export ZOPEN_STABLE_URL="http://www.greenwoodsoftware.com/less/less-${LESS_VERSION}.tar.gz"
+export ZOPEN_STABLE_DEPS="make curl gzip tar ncurses zoslib"
 
 export ZOPEN_EXTRA_CFLAGS="-DPATH_MAX=1024"
 
