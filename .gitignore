@@ -1,7 +1,9 @@
 .vscode
 install
 less-*
+less/
 log
+log.*/
 
 # Vim swap files
 [._]*.s[a-v][a-z]
