@@ -1,5 +1,5 @@
 # bump: less-version /LESS_VERSION="(.*)"/ fetch:https://www.greenwoodsoftware.com/less/|/less-(\d+)./|semver:*
-LESS_VERSION="643"
+LESS_VERSION="654"
 
 export ZOPEN_BUILD_LINE="STABLE"
 export ZOPEN_STABLE_URL="http://www.greenwoodsoftware.com/less/less-${LESS_VERSION}.tar.gz"
