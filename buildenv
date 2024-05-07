@@ -1,9 +1,10 @@
 # bump: less-version /LESS_VERSION="(.*)"/ fetch:https://www.greenwoodsoftware.com/less/|/less-(\d+)./|semver:*
-LESS_VERSION="643"
+LESS_VERSION="654"
 
 export ZOPEN_BUILD_LINE="STABLE"
-export ZOPEN_STABLE_URL="http://www.greenwoodsoftware.com/less/less-${LESS_VERSION}.tar.gz"
-export ZOPEN_STABLE_DEPS="make curl gzip tar ncurses zoslib"
+export ZOPEN_STABLE_URL="https://github.com/gwsw/less.git"
+export ZOPEN_STABLE_TAG="v${LESS_VERSION}"
+export ZOPEN_STABLE_DEPS="autoconf automake m4 libtool perl make curl gzip tar ncurses zoslib grep coreutils groff"
 
 export ZOPEN_DEV_URL="https://github.com/gwsw/less.git"
 export ZOPEN_DEV_DEPS="autoconf automake m4 libtool perl make curl gzip tar ncurses zoslib grep coreutils groff"
@@ -19,18 +20,11 @@ export ZOPEN_COMP=CLANG
 export ZOPEN_CLEAN="true"
 
 zopen_post_buildenv() {
-  if [ "$ZOPEN_BUILD_LINE" = "DEV" ]; then
-    ZOPEN_EXTRA_CPPFLAGS="-DLESSTEST=1 -I\$NCURSES_HOME/include/ncurses"
-    #TODO: currently hangs
-    #ZOPEN_CHECK="make"
-    #ZOPEN_CHECK_OPTS="check"
-  fi
+  ZOPEN_EXTRA_CPPFLAGS="-DLESSTEST=1 -I\$NCURSES_HOME/include/ncurses"
 }
 
 bootstrap() {
-  if [ "$ZOPEN_BUILD_LINE" = "DEV" ]; then
-    make -f Makefile.aut help.c defines.h.in funcs.h distfiles
-  fi
+  make -f Makefile.aut help.c defines.h.in funcs.h distfiles
 }
 
 zopen_check_results()
