@@ -1,6 +1,6 @@
 # bump: less-version /LESS_VERSION="(.*)"/ fetch:https://www.greenwoodsoftware.com/less/|/less-(\d+)./|semver:*
 
-LESS_VERSION="668"
+LESS_VERSION="676"
 
 export ZOPEN_BUILD_LINE="STABLE"
 export ZOPEN_STABLE_URL="https://github.com/gwsw/less.git"
