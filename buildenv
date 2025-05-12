@@ -10,7 +10,8 @@ export ZOPEN_STABLE_DEPS="autoconf automake m4 libtool perl make curl gzip tar n
 export ZOPEN_DEV_URL="https://github.com/gwsw/less.git"
 export ZOPEN_DEV_DEPS="autoconf automake m4 libtool perl make curl gzip tar ncurses zoslib grep coreutils groff zusage"
 
-export ZOPEN_EXTRA_CFLAGS="-DPATH_MAX=1024"
+export ZOPEN_EXTRA_CFLAGS="-mzos-target=zosv2r5 -march=z13 -DPATH_MAX=1024"
+export ZOPEN_SYSTEM_PREREQS="zos25"
 
 export ZOPEN_BOOTSTRAP="boostrap"
 
