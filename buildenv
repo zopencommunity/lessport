@@ -60,5 +60,6 @@ zopen_get_version() {
 zopen_append_to_zoslib_env() {
  cat <<EOF
 ASCII_TERMINFO|set|PROJECT_ROOT/../../ncurses/ncurses/share/terminfo/
+LESSCHARSET|set|utf-8
 EOF
 }
