@@ -1,6 +1,6 @@
 # bump: less-version /LESS_VERSION="(.*)"/ fetch:https://www.greenwoodsoftware.com/less/|/less-(\d+)./|semver:*
 
-LESS_VERSION="683"
+LESS_VERSION="684"
 
 export ZOPEN_BUILD_LINE="STABLE"
 export ZOPEN_STABLE_URL="https://github.com/gwsw/less.git"
@@ -60,5 +60,6 @@ zopen_get_version() {
 zopen_append_to_zoslib_env() {
  cat <<EOF
 ASCII_TERMINFO|set|PROJECT_ROOT/../../ncurses/ncurses/share/terminfo/
+LESSCHARSET|set|utf-8
 EOF
 }
