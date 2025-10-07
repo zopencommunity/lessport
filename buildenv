@@ -3,8 +3,8 @@
 LESS_VERSION="685"
 
 export ZOPEN_BUILD_LINE="STABLE"
-export ZOPEN_STABLE_URL="https://github.com/gwsw/less.git"
-export ZOPEN_STABLE_TAG="v${LESS_VERSION}"
+export ZOPEN_STABLE_URL="https://www.greenwoodsoftware.com/less/less-${LESS_VERSION}.tar.gz"
+#export ZOPEN_STABLE_TAG="v${LESS_VERSION}"
 export ZOPEN_STABLE_DEPS="autoconf automake m4 libtool perl make curl gzip tar ncurses zoslib grep coreutils groff zusage gettext"
 
 export ZOPEN_DEV_URL="https://github.com/gwsw/less.git"
