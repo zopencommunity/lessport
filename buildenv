@@ -1,10 +1,10 @@
-# bump: less-version /LESS_VERSION="(.*)"/ fetch:https://www.greenwoodsoftware.com/less/|/less-(\d+)./|semver:*
+# bump: less-version /LESS_VERSION="(.*)"/ gitrefs:https://github.com/gwsw/less.git|re:/v([\d.]+)-rel/$1/|semver:*
 
-LESS_VERSION="684"
+LESS_VERSION="685"
 
 export ZOPEN_BUILD_LINE="STABLE"
 export ZOPEN_STABLE_URL="https://github.com/gwsw/less.git"
-export ZOPEN_STABLE_TAG="v${LESS_VERSION}"
+export ZOPEN_STABLE_TAG="v${LESS_VERSION}-rel"
 export ZOPEN_STABLE_DEPS="autoconf automake m4 libtool perl make curl gzip tar ncurses zoslib grep coreutils groff zusage gettext"
 
 export ZOPEN_DEV_URL="https://github.com/gwsw/less.git"
