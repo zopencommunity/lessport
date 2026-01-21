@@ -1,6 +1,6 @@
 # bump: less-version /LESS_VERSION="(.*)"/ gitrefs:https://github.com/gwsw/less.git|re:/v([\d.]+)-rel/$1/|semver:*
 
-LESS_VERSION="685"
+LESS_VERSION="691"
 
 export ZOPEN_BUILD_LINE="STABLE"
 export ZOPEN_STABLE_URL="https://github.com/gwsw/less.git"
