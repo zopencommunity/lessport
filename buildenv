@@ -22,7 +22,7 @@ export ZOPEN_COMP=CLANG
 export ZOPEN_CLEAN="true"
 
 zopen_post_buildenv() {
-  ZOPEN_EXTRA_CPPFLAGS="-DLESSTEST=1 -I\$NCURSES_HOME/include/ncurses"
+  ZOPEN_EXTRA_CPPFLAGS="-DLESSTEST=1 -DUSE_TERMCAP -I\$NCURSES_HOME/include/ncurses"
 }
 
 bootstrap() {
