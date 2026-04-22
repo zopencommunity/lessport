@@ -5,7 +5,7 @@ LESS_VERSION="692"
 export ZOPEN_BUILD_LINE="STABLE"
 export ZOPEN_STABLE_URL="https://github.com/gwsw/less.git"
 export ZOPEN_STABLE_TAG="v${LESS_VERSION}-rel"
-export ZOPEN_STABLE_DEPS="autoconf automake m4 libtool perl make curl gzip tar ncurses zoslib grep coreutils groff zusage gettext"
+export ZOPEN_STABLE_DEPS="autoconf automake m4 libtool make ncurses zoslib grep coreutils groff zusage gettext"
 
 export ZOPEN_DEV_URL="https://github.com/gwsw/less.git"
 export ZOPEN_DEV_DEPS="autoconf automake m4 libtool perl make curl gzip tar ncurses zoslib grep coreutils groff zusage gettext"
