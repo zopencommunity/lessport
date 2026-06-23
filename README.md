@@ -1,3 +1,5 @@
+[![CodeQL](https://github.com/zopencommunity/lessport/actions/workflows/codeql.yml/badge.svg)](https://github.com/zopencommunity/lessport/actions/workflows/codeql.yml)
+
 [![Automatic version updates](https://github.com/ZOSOpenTools/lessport/actions/workflows/bump.yml/badge.svg)](https://github.com/ZOSOpenTools/lessport/actions/workflows/bump.yml)
 
 # Less
